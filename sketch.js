@@ -1,125 +1,288 @@
-var canvas;
 
+//Home page
 
-//img
+var img0;
 var img1;
-var img2;
-var img3;
-var img4;
-var img5;
+var gif1;
+var gif2;
+var gif3;
+var gif4;
+var gif5;
 
-//transparency and move
-var tra1=255;
-var tra2=255;
-var tra3=50;
-var tra4=255;
-var xp = 0;
-var yp = 0;
+var x = 0;
+var speed = 1.5;
+var s = 0;
+var t1 = 'There are 5 hazardous air pollution cities'
+var t2 = 'Let us clean them up'
 
-//text
-var t = 'Wave your hands to clean the haze';
-var delhi1 = '11 out of the 12 most polluted cities on a World Health Organization list were in India'
-var delhi2 = 'In India, terrorism has taken 65,900 human lives between 1994 and 2017,'
-var delhi3 = 'which is almost half of deaths caused by air pollution in a single year.'
+var j = 25;
+var tra1 = 255;
+var tra2 = 255;
+var tra3 = 0;
+var tra4 = 0;
+
+//fluid haze
+var mainPath;
+var bobs = [];
+var globalHue;
 
 
 function preload(){
-  img1 = loadImage("./assets/delhi.jpg");
-  img2 = loadImage("./assets/haze1.png");
-  img3 = loadImage("./assets/haze2.png");
-  img4 = loadImage("./assets/haze5.png");
-  img5 = loadImage("./assets/haze6.png");
+  img0 = loadImage("./assets/map.png");
+  img1 = loadImage("./assets/fog1.png");
 }
 
 function setup() {
-  canvas = createCanvas(windowWidth,windowHeight);
-  canvas.position(0, 0);
+  createCanvas(windowWidth,windowHeight);
+  gif1 = createImg("./assets/Dots/1.gif");
+  gif2 = createImg("./assets/Dots/2.gif");
+  gif3 = createImg("./assets/Dots/3.gif");
+  gif4 = createImg("./assets/Dots/4.gif");
+  gif5 = createImg("./assets/Dots/5.gif");
 
-  gest.options.subscribeWithCallback(function(gesture) {
-    //var message = '';
-    if (gesture.direction) {
-      //message = gesture.direction;
-
-      tra1 = tra1 - 15;
-      tra2 = tra2 - 20;
-      xp = xp + 100;
-      yp = yp + 10;
-
-    } else {
-      //message = gesture.error.message;
-    }
-
-  });
-
-  gest.start();
-  gest.options.sensitivity(90);
+  reset();
 
 }
 
 
 function draw() {
-  background(255);
 
-  cityDelhi();
+    image(img0, 0, 0, windowWidth, windowHeight);
 
-  if (tra1 < 60 && tra2 < 60){
+    if(tra2<10){
 
+      cities();
+
+      //sub
+      textAlign(CENTER);
+      textSize(32);
+      stroke(140, tra3);
+      strokeWeight(3);
+      fill(255, tra3);
+      textFont('Amatic SC');
+      text(t1, windowWidth/2,  60);
+      text(t2, windowWidth/2,  95);
+      tra3 = tra3+10;
+
+    }
+
+    //title
+    push()
+    fill(255,tra1);
+    rect(-50, -50, windowWidth+500, windowHeight+500);
+    textSize(150);
     textAlign(CENTER);
-    fill(159, 87, 39, tra3);
-    textSize(18);
-    textStyle(NORMAL);
-    textFont('Raleway');
-    text(delhi1, windowWidth/2, windowHeight/4 - 110);
-    text(delhi2, windowWidth/2, windowHeight/4 - 85);
-    text(delhi3, windowWidth/2, windowHeight/4 - 60);
+    textFont('Amatic SC');
+    fill(10, tra2);
+    stroke(100, tra2);
+    strokeWeight(3);
+    text('THE HAZY WORLD', windowWidth/2, windowHeight/2);
+    tra1 = tra1 -3;
+    tra2 = tra2 -5;
+    pop();
 
-    textSize(30);
-    textStyle(BOLD);
-    fill(90, 126, 78, tra3);
-    text('NEXT', windowWidth - 135,  windowHeight - 55);
-    text('BACK', 150,  windowHeight - 55);
+    haze();
 
-    textSize(45);
-    fill(159, 87, 39, tra3);
-    text('Delhi', windowWidth/2,  windowHeight - 100);
-
-
-    tra3 = tra3 + 20;
-  }
-
-  if(tra1 < 200){
-    var div = createDiv(cityDelhi.function());
-    div.hide();
+    //cloud
+    image(img1, x, 100, windowWidth, windowHeight);
+    image(img1, x-500, -100, windowWidth, windowHeight);
+    x = x+speed;
+    if(x > 450 || x < -50){
+      speed = speed * -1;
     }
 
 }
 
+function cities(){
 
-function cityDelhi(){
-  image(img1, 0, 0, windowWidth,windowHeight);
-
-  push();
-  tint(255, tra1);
-   //image(img2, 20-xp, 20, img2.width, img2.height);
-   //image(img2, 0-xp, 0, img2.width/2, img2.height/2);
-   //image(img2, 100-xp, 0, img2.width, img2.height);
-   //image(img2, 100-xp, 0, img2.width/2, img2.height/2);
-   //image(img2, 350+xp, 0, img2.width, img2.height);
-   //image(img2, 400+xp, 0, img2.width/2, img2.height/2);
-   // image(img2, 150+xp, 0, img2.width, img2.height);
-  image(img4, 0, 0, windowWidth, windowHeight);
+  //button
+  push()
+  strokeWeight(3);
+  stroke(255, tra4);
+  fill(200,100);
+  rect(windowWidth/2 - 180, windowHeight-104, 160, 50, 30);
+  rect(windowWidth/2 + 40, windowHeight-104, 160, 50, 30);
+  textSize(22);
+  noStroke();
+  fill(255, tra4);
+  text('PLAY', windowWidth/2 + 120,  windowHeight-71);
+  text('READ MORE', windowWidth/2 - 100,  windowHeight-71);
+  tra4 = tra4 + 10;
   pop();
 
-  push();
-  tint(255, tra2);
-  image(img3, 0, 160+yp, windowWidth, 500);
-  image(img5, 0, 0, windowWidth, windowHeight);
-  pop();
+  //icon
+  if(tra4>290){
+    gif1.size(s, s);
+    gif1.position(windowWidth/2 + 285, 180);
+    gif2.size(s, s);
+    gif2.position(windowWidth/2 + 160, 235);
+    gif3.size(s, s);
+    gif3.position(windowWidth/2 + 220, 150);
+    gif4.size(s, s);
+    gif4.position(windowWidth/2 + 120, 190);
+    gif5.size(s, s);
+    gif5.position(windowWidth/2 , 220);
 
-  textSize(30);
-  textAlign(CENTER);
-  fill(86, 101, 115, tra4);
-  text(t, windowWidth/2,  windowHeight/2);
+    s = s+5;
+    if(s>80){
+      s=80;
+    }
 
-  tra4 = tra4 - 15;
+  }
+
+  if(mouseX>windowWidth/2 + 40 && mouseX<windowWidth/2 + 200 && mouseY>510 && mouseY<600) {
+    push()
+    strokeWeight(3);
+    stroke(248, 249, 249);
+    fill(248, 249, 249);
+    //rect(windowWidth/2 - 180, windowHeight-104, 160, 50, 30);
+    rect(windowWidth/2 + 40, windowHeight-104, 160, 50, 30);
+    textSize(29);
+    noStroke();
+    textStyle(BOLD);
+    fill(113, 125, 126);
+    text('PLAY', windowWidth/2 + 120,  windowHeight-67);
+    //text('READ MORE', windowWidth/2 - 100,  windowHeight-69);
+    pop();
+  }
+
+  if(mouseX>windowWidth/2 - 180 && mouseX<windowWidth/2 - 20 && mouseY>510 && mouseY<600) {
+    push()
+    strokeWeight(3);
+    stroke(248, 249, 249);
+    fill(248, 249, 249);
+    rect(windowWidth/2 - 180, windowHeight-104, 160, 50, 30);
+    //rect(windowWidth/2 + 40, windowHeight-104, 160, 50, 30);
+    textSize(29);
+    noStroke();
+    textStyle(BOLD);
+    fill(113, 125, 126);
+    //text('PLAY', windowWidth/2 + 120,  windowHeight-70);
+    text('READ MORE', windowWidth/2 - 99,  windowHeight-67);
+    pop();
+  }
+
+
+}
+
+//fluid haze
+function haze(){
+
+  for(var i=0; i<bobs.length; i++){
+    var b = bobs[i];
+    b.move();
+
+    push();
+    colorMode(RGB, 255);
+    //stroke(b.hue, b.bright, 200, 4);
+    stroke(255, 255, 255, 5);
+    strokeWeight(b.mass);
+    point(b.pos.x, b.pos.y);
+
+    pop();
+   }
+
+}
+
+function reset(){
+  globalHue = random(255);
+
+  mainPath = new Path();
+
+  bobs.splice(0, bobs.length);
+
+  for(let i=0; i<2000; i++){
+    let rot = p5.Vector.random2D();
+    rot.mult(random(250));
+
+    let x = mainPath.vertices[0].x + rot.x;
+    let y = mainPath.vertices[0].y + rot.y;
+
+    bobs.push(new Bob(x, y, mainPath));
+  }
+}
+
+function Bob(x, y, path){
+
+  this.pos = new p5.Vector(x, y);
+  this.vel = new p5.Vector(2, 0);
+  this.acc = new p5.Vector(1, 0);
+	this.path = path;
+	this.direction = 1;
+  this.vertIndex = 0;
+	this.variance = random(0.8, 1.3);
+  this.drag = random(0.98, 0.99);
+	this.hue = (globalHue + random(-40, 40)) % 255;
+	this.bright = random(255);
+	this.mass = random(80);
+
+  this.move = function() {
+		// Once it reaches its target, pick the next vertex to seek.
+		let target = this.path.vertices[this.vertIndex];
+		let targetDist = dist(this.pos.x, this.pos.y, target.x, target.y);
+
+		if (targetDist < 80) {
+			if ((this.direction == 1 && this.vertIndex == this.path.vertices.length - 1) ||
+				  (this.direction == -1 && this.vertIndex == 0)) {
+				this.direction *= -1;
+			}
+			this.vertIndex += this.direction;
+		}
+
+		// Add some air drag so it can eventually settle.
+		this.vel.mult(this.drag);
+
+		// Seek its target.
+		if (targetDist > 1) {
+			let steer = new p5.Vector(target.x, target.y);
+			steer.sub(this.pos);
+			steer.normalize();
+			steer.mult(0.05 * this.variance);
+			this.acc.add(steer);
+		}
+
+    // Push it away from the mouse.
+    let mouseDist = dist(this.pos.x, this.pos.y, mouseX, mouseY);
+    let mouseThresh = 100;
+
+    if (mouseDist < mouseThresh) {
+      let push = new p5.Vector(this.pos.x, this.pos.y);
+      push.sub(new p5.Vector(mouseX, mouseY));
+      push.normalize();
+      push.mult((mouseThresh - mouseDist) * 0.01);
+      this.acc.add(push);
+    }
+
+		// Move it.
+		this.vel.add(this.acc);
+		this.vel.limit(6);
+		this.pos.add(this.vel);
+		this.acc.mult(0);
+	}
+
+}
+
+function Path() {
+
+	this.vertices = [];
+
+	let count = 5;
+	for (let i = 0; i < count; i++) {
+		let x = map(i, 0, count, width / 4, width - width / 4);
+		let y = random(50, height - 100);
+		this.vertices.push(new p5.Vector(x, y))
+	}
+
+}
+
+
+function mouseClicked() {
+
+      if(mouseX>windowWidth/2 + 40 && mouseX<windowWidth/2 + 200 && mouseY>510 && mouseY<600) {
+          window.location.href = "beijing.html";}
+
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
