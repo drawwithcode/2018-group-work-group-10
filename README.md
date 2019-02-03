@@ -1,6 +1,5 @@
 # HAZY WORLD
-2018-group-work-group-10 created by GitHub Classroom
-HAZE WORLD
+  **Hazy World** is a student project based in Politacnico Di Milano and cretated under Creative Codng course in 2018-2019 fall semester. It is created with p5 in javascript language.  
 
 ## SUBJECT OF PROJECT 
 There are a lot of different type of pollution,we want to hightlight the problem of air pollution and haze.
@@ -34,5 +33,5 @@ Firstly, the user clicks the city that s/he wants to explore. Then, the user sta
 
 ## TEAM MEMBERS:
   * Zixun  Huang
-  * Weıkang Zhong
+  * Weikang Zhong
   * Deniz Yanik
