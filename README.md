@@ -1,6 +1,12 @@
 # HAZY WORLD
   **Hazy World** is a student project based in Politacnico Di Milano and cretated under Creative Codng course in 2018-2019 fall semester. It is created with p5 in javascript language.  
 
+## Content
+ * Subject of project
+ * Aim of project
+ * Interactions
+ * Howit works?
+ * Details
 ## SUBJECT OF PROJECT 
 There are a lot of different type of pollution,we want to hightlight the problem of air pollution and haze.
 There are some cities which are Beijing, China/New Delhi, India/Ulan Bator, Mongolia/Cairo, Egypt/Lahore, Pakistan.
