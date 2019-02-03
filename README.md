@@ -31,12 +31,12 @@ Firstly, the user clicks the city that s/he wants to explore. Then, the user sta
 * The project contains different code libraries. 
   * **gest.min.js** is the main library to obtain human gestures and to clean actions.
   * **p5.geolocation** is used to get the location of users and direct them to learn air pollution rates at their location.
+  ![alt text](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/gesture-recognition-find-hand.png)
   
-  ![alt text](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/delhi.jpg)
 * The graphical style is illustration which is drawn by hand. 
   * In drawings, there are most important city landmarks such as Taj Mahal in Delhi. 
   * The colors of drawings are based on the color of country and city. 
-  
+  ![alt text](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/delhi.jpg)
 
 
 
