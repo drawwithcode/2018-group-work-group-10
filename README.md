@@ -10,7 +10,7 @@
 ## SUBJECT OF PROJECT 
 There are a lot of different type of pollution,we want to hightlight the problem of air pollution and haze.
 There are some cities which are Beijing, China/New Delhi, India/Ulan Bator, Mongolia/Cairo, Egypt/Lahore, Pakistan.
-![Lahore](https://2018-group-work-group-10/assets/Lahore.jpg)
+![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/map_readme.png)
 
 ## AIM OF PROJECT
 This project is to make people experience the haze and be aware of  the harm of air pollution around the world. 
