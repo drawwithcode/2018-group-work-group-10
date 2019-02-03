@@ -14,3 +14,6 @@ Users will experience the feeling of staying in the environment of heavy air pol
 * Hazy World combines two different interaction with its users. They are waving hands and clicking by mouse.
   * WebCam; Main interactions such as cleaning the haze
   * Mouse; Sub interactions such as swiping to next city.
+
+### HOW IT WORKS?
+Firstly, t
