@@ -16,4 +16,6 @@ Users will experience the feeling of staying in the environment of heavy air pol
   * Mouse; Sub interactions such as swiping to next city.
 
 ### HOW IT WORKS?
+![alt text](2018-group-work-group-10/assets/delhi.jpg)
+      
 Firstly, t
