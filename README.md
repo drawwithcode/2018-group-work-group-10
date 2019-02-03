@@ -11,6 +11,6 @@ This project is to make people experience the haze and be aware of  the harm of
 Users will experience the feeling of staying in the environment of heavy air pollution and try to see the landscape of the city clearly
 
 ## INTERACTIONS
-Hazy World combines two different interaction with its users. They are;
-*WebCam; Main interactions such as cleaning the haze
-*Mouse; Sub interactions such as swiping to next city.
+1.Hazy World combines two different interaction with its users. They are;
+ 1.WebCam; Main interactions such as cleaning the haze
+ 1.Mouse; Sub interactions such as swiping to next city.
