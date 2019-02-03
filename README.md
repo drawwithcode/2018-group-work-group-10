@@ -18,4 +18,4 @@ Users will experience the feeling of staying in the environment of heavy air pol
 ### HOW IT WORKS?
 ![alt text](2018-group-work-group-10/assets/delhi.jpg)
       
-Firstly, t
+Firstly, the user clicks the city that s/he wants to explore. Then, the user starts to experience how haze effects cities. They try to clear their vision with interacting with webcam because they can barely see the city.
