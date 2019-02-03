@@ -1,3 +1,4 @@
+![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/losgo.png)
 # HAZY WORLD
   **Hazy World** is a student project based in Politacnico Di Milano and cretated under Creative Codng course in 2018-2019 fall semester. It is created with p5 in javascript language.  
 
