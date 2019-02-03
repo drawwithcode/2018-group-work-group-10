@@ -28,3 +28,11 @@ Firstly, the user clicks the city that s/he wants to explore. Then, the user sta
 * The graphical style is illustration which is drawn by hand. 
   * In drawings, there are most important city landmarks such as Taj Mahal in Delhi. 
   * The colors of drawings are based on the color of country and city. 
+
+
+
+
+## TEAM MEMBERS:
+  * Zixun  Huang
+  * Weıkang Zhong
+  * Deniz Yanik
