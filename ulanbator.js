@@ -79,7 +79,7 @@ function draw() {
   var count = map(tra1, 255, 0, 0,TWO_PI);
   push();
   noStroke();
-  fill(230);
+  fill(255);
   arc(60, 60, 50, 50, 0, count);
   strokeWeight(1.5);
   stroke(80);
