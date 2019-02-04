@@ -84,7 +84,7 @@ function draw() {
   arc(60, 60, 50, 50, 0, count);
   strokeWeight(1.5);
   stroke(80);
-  fill(90,40);
+  fill(130,20);
   ellipse(60, 60, 50, 50);
   pop();
 }
