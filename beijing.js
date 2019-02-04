@@ -6,20 +6,19 @@ var img2;
 var img3;
 var img4;
 var img5;
-var img6;
 var gif;
 
 //transparency and move
 var tra1=250;
 var tra2=50;
-var tra3=50;
+var tra3=0;
 var tra4=255;
 
 //text
-var t = 'Wave your hands to clean PM2.5';
-var delhi1 = '11 out of the 12 most polluted cities on a World Health Organization list were in India'
-var delhi2 = 'In India, terrorism has taken 65,900 human lives between 1994 and 2017,'
-var delhi3 = 'which is almost half of deaths caused by air pollution in a single year.'
+var t = 'Wave your arms to clean ';
+var t1 = 'PM2.5';
+var b1 = 'In China, over 1.3 million deaths per year were linked to air pollution'
+
 
 
 function preload(){
@@ -45,8 +44,8 @@ function setup() {
     if (gesture.direction) {
       //message = gesture.direction;
 
-      tra1 = tra1 - 25;
-      tra2 = tra2 - 20;
+      tra1 = tra1 - 40;
+      tra2 = tra2 - 35;
 
     } else {
       //message = gesture.error.message;
@@ -69,18 +68,24 @@ function draw() {
    } else {
       gif.size(0, 0);
   }
-  console.log(frameCount);
+  //console.log(frameCount);
 
 
-  if (tra1 < 100 && tra2 < 100){
+  if (tra1 < 30 && tra2 < 30){
+
+    push();
+    rectMode(CENTER);
+    strokeWeight(1);
+    stroke(253, 242, 233);
+    fill(200,100);
+    rect(windowWidth/2,  windowHeight/4 - 110, 515, 40, 5);
+    pop();
 
     textAlign(CENTER);
     textFont('Amatic SC');
-    fill(159, 87, 39, tra3);
-    textSize(18);
-    text(delhi1, windowWidth/2, windowHeight/4 - 110);
-    text(delhi2, windowWidth/2, windowHeight/4 - 85);
-    text(delhi3, windowWidth/2, windowHeight/4 - 60);
+    fill(250, tra3);
+    textSize(25);
+    text(b1, windowWidth/2, windowHeight/4 - 100);
 
     push()
     strokeWeight(4);
@@ -97,12 +102,13 @@ function draw() {
     text('NEXT', windowWidth/2 + 460,  windowHeight - 48);
     text('BACK', windowWidth/2 - 460,  windowHeight - 48);
 
+    push();
     textSize(55);
-    fill(229, 231, 233, tra3);
+    fill(229, 232, 232, tra3);
     text('Beijing', windowWidth/2,  windowHeight - 60);
+    pop();
 
     tra3 = tra3 + 20;
-
 
     if(mouseX>windowWidth/2 + 390 && mouseX<windowWidth/2 + 530 && mouseY>windowHeight - 85 && mouseY<windowHeight - 35) {
       noStroke();
@@ -157,7 +163,13 @@ function cityBeijing(){
   textSize(45);
   textAlign(CENTER);
   fill(86, 101, 115, tra4);
-  text(t, windowWidth/2,  windowHeight/2);
+  text(t, windowWidth/2-50,  windowHeight/2);
+  push();
+  strokeWeight(2.5);
+  stroke(86, 101, 115, tra4);
+  fill(230, 176, 170, tra4);
+  text(t1, windowWidth/2+145,  windowHeight/2);
+  pop();
 
   tra4 = tra4 - 8;
 }
@@ -165,10 +177,10 @@ function cityBeijing(){
 
 function mouseClicked() {
 
-      if(mouseX<1200 && mouseX>1050 && mouseY>520 && mouseY<570) {
+      if(mouseX>windowWidth/2 + 390 && mouseX<windowWidth/2 + 530 && mouseY>windowHeight - 85 && mouseY<windowHeight - 35) {
           window.location.href = "delhi.html";}
 
-      if(mouseX<240 && mouseX>100 && mouseY>520 && mouseY<570) {
-          window.location.href = "index.html";}
+      if(mouseX>windowWidth/2 - 530 && mouseX<windowWidth/2 - 390 && mouseY>windowHeight - 85 && mouseY<windowHeight - 35) {
+          window.location.href = "back1.html";}
 
 }

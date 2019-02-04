@@ -54,12 +54,12 @@ function draw() {
       cities();
 
       //sub
+      textFont('Amatic SC');
       textAlign(CENTER);
       textSize(32);
-      stroke(140, tra3);
+      stroke(110, tra3);
       strokeWeight(3);
       fill(255, tra3);
-      textFont('Amatic SC');
       text(t1, windowWidth/2,  60);
       text(t2, windowWidth/2,  95);
       tra3 = tra3+10;
@@ -123,14 +123,14 @@ function cities(){
     gif5.size(s, s);
     gif5.position(windowWidth/2 , 220);
 
-    s = s+5;
-    if(s>80){
-      s=80;
+    s = s+3;
+    if(s>40){
+      s=40;
     }
 
   }
 
-  if(mouseX>windowWidth/2 + 40 && mouseX<windowWidth/2 + 200 && mouseY>510 && mouseY<600) {
+  if(mouseX>windowWidth/2 + 40 && mouseX<windowWidth/2 + 200 &&  mouseY>windowHeight-110 && mouseY<windowHeight-50) {
     push()
     strokeWeight(3);
     stroke(248, 249, 249);
@@ -146,18 +146,16 @@ function cities(){
     pop();
   }
 
-  if(mouseX>windowWidth/2 - 180 && mouseX<windowWidth/2 - 20 && mouseY>510 && mouseY<600) {
+  if(mouseX>windowWidth/2 - 180 && mouseX<windowWidth/2 - 20 &&  mouseY>windowHeight-110 && mouseY<windowHeight-50) {
     push()
     strokeWeight(3);
     stroke(248, 249, 249);
     fill(248, 249, 249);
     rect(windowWidth/2 - 180, windowHeight-104, 160, 50, 30);
-    //rect(windowWidth/2 + 40, windowHeight-104, 160, 50, 30);
     textSize(29);
     noStroke();
     textStyle(BOLD);
     fill(113, 125, 126);
-    //text('PLAY', windowWidth/2 + 120,  windowHeight-70);
     text('READ MORE', windowWidth/2 - 99,  windowHeight-67);
     pop();
   }
@@ -278,8 +276,11 @@ function Path() {
 
 function mouseClicked() {
 
-      if(mouseX>windowWidth/2 + 40 && mouseX<windowWidth/2 + 200 && mouseY>510 && mouseY<600) {
+      if(mouseX>windowWidth/2 + 40 && mouseX<windowWidth/2 + 200 &&  mouseY>windowHeight-110 && mouseY<windowHeight-50) {
           window.location.href = "beijing.html";}
+
+      if(mouseX>windowWidth/2 - 180 && mouseX<windowWidth/2 - 20 &&  mouseY>windowHeight-110 && mouseY<windowHeight-50) {
+          window.location.href = "readmore.html";}
 
 }
 

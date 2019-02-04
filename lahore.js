@@ -9,26 +9,25 @@ var img5;
 var gif;
 
 //transparency and move
-var tra1=255;
-var tra2=255;
-var tra3=50;
+var tra1=250;
+var tra2=50;
+var tra3=0;
 var tra4=255;
-var xp = 0;
-var yp = 0;
 
 //text
-var t = 'Wave your hands to clean PM2.5';
-var delhi1 = '11 out of the 12 most polluted cities on a World Health Organization list were in India'
-var delhi2 = 'In India, terrorism has taken 65,900 human lives between 1994 and 2017,'
-var delhi3 = 'which is almost half of deaths caused by air pollution in a single year.'
+var t = 'Wave your arms to clean';
+var t1 = 'NO2';
+var b1 = 'Lahore has the worst air quality in Pakistan,';
+var b2 = 'with 2 blue sky days and 36 hazardous air pollution days in 2017.';
+
 
 
 function preload(){
   img1 = loadImage("./assets/Lahore.jpg");
-  img2 = loadImage("./assets/haze7.png");
-  img3 = loadImage("./assets/haze8.png");
-  img4 = loadImage("./assets/haze9.png");
-  img5 = loadImage("./assets/haze6.png");
+  img2 = loadImage("./assets/Lahore/fog1.png");
+  img3 = loadImage("./assets/Lahore/fog2.png");
+  img4 = loadImage("./assets/Lahore/fog3.png");
+  img5 = loadImage("./assets/Lahore/dust2.png");
 
   //gif = createImg("./assets/gest.gif");
 }
@@ -46,10 +45,8 @@ function setup() {
     if (gesture.direction) {
       //message = gesture.direction;
 
-      tra1 = tra1 - 15;
-      tra2 = tra2 - 20;
-      xp = xp + 100;
-      yp = yp + 10;
+      tra1 = tra1 - 40;
+      tra2 = tra2 - 35;
 
     } else {
       //message = gesture.error.message;
@@ -66,47 +63,85 @@ function setup() {
 function draw() {
   cityBeijing();
 
-  if(frameCount < 15){
+  if(frameCount < 30){
       gif.size(200, 200);
       gif.position(windowWidth/2 - 100, 70);
    } else {
       gif.size(0, 0);
   }
-  console.log(frameCount);
+  //console.log(frameCount);
 
 
-  if (tra1 < 100 && tra2 < 100){
+  if (tra1 < 30 && tra2 < 30){
+
+    push();
+    rectMode(CENTER);
+    strokeWeight(1);
+    stroke(92, 55, 56);
+    fill(200,100);
+    rect(windowWidth/2,  windowHeight/4 - 93, 515, 70, 5);
+    pop();
 
     textAlign(CENTER);
-    fill(159, 87, 39, tra3);
-    textSize(18);
-    textStyle(NORMAL);
-    textFont('Raleway');
-    text(delhi1, windowWidth/2, windowHeight/4 - 110);
-    text(delhi2, windowWidth/2, windowHeight/4 - 85);
-    text(delhi3, windowWidth/2, windowHeight/4 - 60);
+    textFont('Amatic SC');
+    fill(115, 79, 79, tra3);
+    textSize(25);
+    text(b1, windowWidth/2, windowHeight/4 - 100);
+    text(b2, windowWidth/2, windowHeight/4 - 70);
 
     push()
     strokeWeight(4);
     stroke(253, 242, 233);
     noFill();
-    rect(100, 520, 140, 50, 15);
-    rect(1050, 520, 140, 50, 15);
+    rectMode(CENTER);
+    rect(windowWidth/2 + 460,  windowHeight - 60, 140, 50, 15);
+    rect(windowWidth/2 - 460,  windowHeight - 60, 140, 50, 15);
     pop();
 
-    textSize(30);
+    textSize(35);
     textStyle(BOLD);
     fill(253, 242, 233, tra3);
-    text('NEXT', windowWidth - 135,  windowHeight - 55);
-    text('BACK', 150,  windowHeight - 55);
+    text('NEXT', windowWidth/2 + 460,  windowHeight - 48);
+    text('BACK', windowWidth/2 - 460,  windowHeight - 48);
 
-    textSize(45);
-    fill(159, 87, 39, tra3);
-    text('Ulan Bator', windowWidth/2,  windowHeight - 100);
+    push();
+    textSize(55);
+    fill(115, 79, 79, tra3);
+    text('Lahore', windowWidth/2,  windowHeight - 60);
+    pop();
 
     tra3 = tra3 + 20;
 
+    if(mouseX>windowWidth/2 + 390 && mouseX<windowWidth/2 + 530 && mouseY>windowHeight - 85 && mouseY<windowHeight - 35) {
+      noStroke();
+      rectMode(CENTER);
+      fill(248, 249, 249, 100);
+      rect(windowWidth/2 + 460,  windowHeight - 60, 140, 50, 15);
+      push();
+      textSize(35);
+      stroke(140);
+      strokeWeight(3);
+      fill(253, 242, 233);
+      text('NEXT', windowWidth/2 + 460,  windowHeight - 48);
+      pop();
+    }
+
+    if(mouseX>windowWidth/2 - 530 && mouseX<windowWidth/2 - 390 && mouseY>windowHeight - 85 && mouseY<windowHeight - 35) {
+      noStroke();
+      rectMode(CENTER);
+      fill(248, 249, 249, 100);
+      rect(windowWidth/2 - 460,  windowHeight - 60, 140, 50, 15);
+      push();
+      textSize(35);
+      stroke(140);
+      strokeWeight(3);
+      fill(253, 242, 233);
+      text('BACK', windowWidth/2 - 460,  windowHeight - 48);
+      pop();
+    }
+
   }
+
 
 }
 
@@ -116,37 +151,38 @@ function cityBeijing(){
 
   push();
   tint(255, tra1);
-   //image(img2, 20-xp, 20, img2.width, img2.height);
-   //image(img2, 0-xp, 0, img2.width/2, img2.height/2);
-   //image(img2, 100-xp, 0, img2.width, img2.height);
-   //image(img2, 100-xp, 0, img2.width/2, img2.height/2);
-   //image(img2, 350+xp, 0, img2.width, img2.height);
-   //image(img2, 400+xp, 0, img2.width/2, img2.height/2);
-   // image(img2, 150+xp, 0, img2.width, img2.height);
-  image(img4, 0, 0, windowWidth, windowHeight);
+   image(img2, 0, 0);
+   image(img3, 0, 0);
+   image(img4, 0, 0);
   pop();
 
   push();
   tint(255, tra2);
-  image(img3, 0, 160+yp, windowWidth, 500);
   image(img5, 0, 0, windowWidth, windowHeight);
   pop();
 
-  textSize(30);
+  textFont('Amatic SC');
+  textSize(45);
   textAlign(CENTER);
   fill(86, 101, 115, tra4);
-  text(t, windowWidth/2,  windowHeight/2);
+  text(t, windowWidth/2-35,  windowHeight/2);
+  push();
+  strokeWeight(2.5);
+  stroke(86, 101, 115, tra4);
+  fill(244, 236, 247, tra4);
+  text(t1, windowWidth/2+145,  windowHeight/2);
+  pop();
 
-  tra4 = tra4 - 15;
+  tra4 = tra4 - 8;
 }
 
 
 function mouseClicked() {
 
-      if(mouseX<1200 && mouseX>1050 && mouseY>520 && mouseY<570) {
+      if(mouseX>windowWidth/2 + 390 && mouseX<windowWidth/2 + 530 && mouseY>windowHeight - 85 && mouseY<windowHeight - 35) {
           window.location.href = "ulanbator.html";}
 
-      if(mouseX<240 && mouseX>100 && mouseY>520 && mouseY<570) {
-          window.location.href = "index.html";}
+      if(mouseX>windowWidth/2 - 530 && mouseX<windowWidth/2 - 390 && mouseY>windowHeight - 85 && mouseY<windowHeight - 35) {
+          window.location.href = "back4.html";}
 
 }
