@@ -42,6 +42,8 @@ Firstly, the user clicks the city that s/he wants to explore. Then, the user sta
   * The colors of drawings are based on the color of country and city. 
   ![alt text](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/delhi.jpg)
 
+* In different cities, color of the hazes are different to highlight the different pollution reasons and outcomes such as CO, PM2.5, PM10 
+
 
 
 
