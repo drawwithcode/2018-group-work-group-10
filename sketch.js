@@ -46,6 +46,16 @@ function setup() {
 
 
 function draw() {
+    gif1.size(0,0);
+    gif1.position(windowWidth/2 + 285, 180);
+    gif2.size(0,0);
+    gif2.position(windowWidth/2 + 160, 235);
+    gif3.size(0,0);
+    gif3.position(windowWidth/2 + 220, 150);
+    gif4.size(0,0);
+    gif4.position(windowWidth/2 + 120, 190);
+    gif5.size(0,0);
+    gif5.position(windowWidth/2 , 220);
 
     image(img0, 0, 0, windowWidth, windowHeight);
 
