@@ -78,7 +78,7 @@ function draw() {
     strokeWeight(1);
     stroke(90);
     fill(200,100);
-    rect(windowWidth/2,  windowHeight/4 - 110, 530, 40, 5);
+    rect(windowWidth/2,  windowHeight/4 - 110, 540, 40, 5);
     pop();
 
     textAlign(CENTER);
