@@ -70,6 +70,23 @@ function draw() {
   }
   //console.log(frameCount);
 
+   //time
+  if (tra1<0){
+    tra1 = 0;
+  }
+
+  if(tra1>20){
+  var count = map(tra1, 255, 0, 0,TWO_PI);
+  push();
+  noStroke();
+  fill(230);
+  arc(60, 60, 50, 50, 0, count);
+  strokeWeight(1.5);
+  stroke(80);
+  fill(100,40);
+  ellipse(60, 60, 50, 50);
+  pop();
+}
 
   if (tra1 < 30 && tra2 < 30){
 
