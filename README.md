@@ -12,11 +12,17 @@
  * Challenges
  
 ## SUBJECT OF PROJECT 
+
 The theme we choose is the **Air Pollution**, which is more and more serious in in recent years. There are a lot of different type of pollution, we want to hightlight the problem of air pollution especially haze. Therefore, We select some top polluted cities which are Beijing, China/New Delhi, India/Ulan Bator, Mongolia/Cairo, Egypt/Lahore, Pakistan.
+
 ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/map_readme.png)
 
 ## AIM OF PROJECT
-This project is to make people experience the haze as well as different types of haze and be aware of the harm of air pollution around the world. Users will experience the feeling of staying in the environment of heavy air pollution and try to see the landscape of the city clearly. The experience ends showing users some data of that country or city.
+
+This project is to make people experience the haze as well as different types of haze and be aware of the harm of air pollution around the world. 
+
+Users will experience the feeling of staying in the environment of heavy air pollution and try to see the landscape of the city clearly. The experience ends showing users some data of that country or city.
+
 ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/readme_haze.jpg)
 
 ## INTERACTIONS
@@ -32,7 +38,11 @@ This project is to make people experience the haze as well as different types of
        * Moving Mouse; Sub interactions such as moving mouse to push the haze or number.
 
 ### HOW IT WORKS?
-Firstly, the user clicks the city that s/he wants to explore. Then, the user starts to experience how haze effects cities. They try to clear their vision with interacting with webcam because they can barely see the city. After cleaning process, they get specific information about related city and its haze problem. There is next and back button in every page to finish or continue the experience. When the user finishes to experience of every city, they end up with more to read and your location page. In this page user can read more about haze and air pollution. On the other hand, they can learn the percentage of haze and air pollution in their city.  
+
+Firstly, the user clicks the city that s/he wants to explore. Then, the user starts to experience how haze effects cities. They try to clear their vision with interacting with webcam because they can barely see the city. After cleaning process, they get specific information about related city and its haze problem. 
+
+There is next and back button in every page to finish or continue the experience. When the user finishes to experience of every city, they end up with more to read and your location page. In this page user can read more about haze and air pollution. On the other hand, they can learn the percentage of haze and air pollution in their city. 
+
  ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/gest.gif)
 
 ### DETAILS 
@@ -47,7 +57,7 @@ Firstly, the user clicks the city that s/he wants to explore. Then, the user sta
   
   For example:
   
-  gest.options.subscribeWithCallback(function(gesture) {
+  <code> gest.options.subscribeWithCallback(function(gesture) {
     //var message = '';
     if (gesture.direction) {
       message = gesture.direction;
@@ -58,18 +68,18 @@ Firstly, the user clicks the city that s/he wants to explore. Then, the user sta
     }
   });
   gest.start();
-  gest.options.sensitivity(90);
+  gest.options.sensitivity(90); </code>
   
   * **p5.gif.js**
   
   p5.gif.js is a library that let we play animated gifs in p5.js sketches. You can load a gif by calling loadGif('something.gif') and then can display it using p5's built in image() function. Like this:
   
-  if(frameCount < 30){
+  <code> if(frameCount < 30){
       gif.size(200, 200);
       gif.position(windowWidth/2 - 100, 70);
    } else {
       gif.size(0, 0);
-  }
+  } </code>
    
   * **p5.geolocation** 
   
@@ -80,13 +90,14 @@ Firstly, the user clicks the city that s/he wants to explore. Then, the user sta
   
   We used Air Quality Programmatic APIs:[http://aqicn.org/api/cn/](http://aqicn.org/api/cn/) to get the real time air quality index of the user's location. Like this:
   
-  let url =
+  <code>let url =
   'http://api.waqi.info/feed/geo:' + la + ';' + lo + '/?token=7c35c573db01e62c917b73ff16afb1e111780d3d';
-  loadJSON(url, gotData, 'jsonp');
+  loadJSON(url, gotData, 'jsonp'); </code>
  
  * **Graphical Style** 
  
 * The graphical style is illustration which is drawn by hand. 
+
   * In drawings, there are most important city landmarks such as Taj Mahal in Delhi. 
   * The colors of drawings are based on the color of country and city. 
   ![alt text](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/delhi.jpg)
