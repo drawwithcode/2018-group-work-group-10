@@ -5,8 +5,10 @@
  * Subject of project
  * Aim of project
  * Interactions
- * Howit works?
+ * How it works?
  * Details
+ * Challenges
+ 
 ## SUBJECT OF PROJECT 
 There are a lot of different type of pollution,we want to hightlight the problem of air pollution and haze. Therefore,
 We select some top polluted cities which are Beijing, China/New Delhi, India/Ulan Bator, Mongolia/Cairo, Egypt/Lahore, Pakistan.
