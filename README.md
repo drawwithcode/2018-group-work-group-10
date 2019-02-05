@@ -87,7 +87,6 @@ There is next and back button in every page to finish or continue the experience
   * **p5.geolocation** 
   
   p5.geolocation is used to get the location of users and direct them to learn air pollution rates at their location.
-  ![alt text](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/gesture-recognition-find-hand.png)
   
   * **URL Data** 
   
@@ -106,11 +105,24 @@ There is next and back button in every page to finish or continue the experience
 
   * In drawings, there are most important city landmarks such as Taj Mahal in Delhi. 
   * The colors of drawings are based on the color of country and city. 
+  
   ![alt text](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/delhi.jpg)
 
 * In different cities, color of the hazes are different to highlight the different pollution reasons and outcomes such as CO, PM2.5, PM10 
 
 ## CHALLENGES
+
+**Gesture Recognition Sensitiveness**
+
+The gesture recognition sensitiveness is hard to control and it cannot always recognize every gesture from the user. To let user feel the process and percentage of how much haze they clean, we added a ellipse progress bar:
+
+ ```
+  var count = map(tra1, 255, 0, 0,TWO_PI);
+  arc(60, 60, 50, 50, 0, count);
+  ```
+
+**URL Data & Real Time Location**
+
 
 
 ## TEAM MEMBERS:
