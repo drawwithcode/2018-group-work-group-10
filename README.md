@@ -31,10 +31,10 @@ Users will experience the feeling of staying in the environment of heavy air pol
      ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/video-call.png)
       * WebCam; Main interactions such as cleaning the haze 
 
-     ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/cursor.png)
+     ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/cursor1.png)
        * Clicking by Mouse; Sub interactions such as swiping to next city.
      
-     ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/cursor.png)
+     ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/cursor2.png)
        * Moving Mouse; Sub interactions such as moving mouse to push the haze or number.
 
 ### HOW IT WORKS?
@@ -114,7 +114,7 @@ There is next and back button in every page to finish or continue the experience
 
 **Gesture Recognition Sensitiveness**
 
-The gesture recognition sensitiveness is hard to control and it cannot always recognize every gesture from the user. To let user feel the process and percentage of how much haze they clean, we added a ellipse progress bar:
+  The gesture recognition sensitiveness is hard to control and it cannot always recognize every gesture from the user. To let user feel the process and percentage of how much haze they clean, we added a ellipse progress bar:
 
  ```
   var count = map(tra1, 255, 0, 0,TWO_PI);
@@ -123,6 +123,16 @@ The gesture recognition sensitiveness is hard to control and it cannot always re
 
 **URL Data & Real Time Location**
 
+  We had a big problem of getting the URL data and combining it with p5.geolocation.js. Then we changed our code like this:
+
+```
+let url =
+  'http://api.waqi.info/feed/geo:' + la + ';' + lo + '/?token=7c35c573db01e62c917b73ff16afb1e111780d3d';
+  loadJSON(url, gotData, 'jsonp');
+  ```
+  And also add this in html head:
+  
+  ```  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> ``` 
 
 
 ## TEAM MEMBERS:
