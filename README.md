@@ -27,7 +27,7 @@ Users will experience the feeling of staying in the environment of heavy air pol
 ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/readme_haze.jpg)
 
 ## INTERACTIONS
-* Hazy World combines two different interaction with its users. They are waving hands and mouse.
+* Hazy World combines three different interaction with its users. They are waving hands and mouse.
  
      ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/video-call.png)
       * WebCam; Main interactions such as cleaning the haze 
@@ -54,7 +54,7 @@ There is next and back button in every page to finish or continue the experience
   
   gest.js is the main library to obtain human gestures and to clean actions, which is developed by [hdmchl](https://github.com/hdmchl) and it's a webcam based gesture recognition library that helps developers make webpages more immersive.
   
-  We used this library to recognize the uses' gesture so that to clean the haze gradually, as well as to simulate a immersive experience of cleaning haze by waving arms.
+  We used this library to recognize the user's gesture so that to clean the haze gradually, as well as to simulate a immersive experience of cleaning haze by waving arms.
   
   For example:
   
