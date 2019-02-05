@@ -69,8 +69,7 @@ There is next and back button in every page to finish or continue the experience
     }
   });
   gest.start();
-  gest.options.sensitivity(90); </code>
-  
+  gest.options.sensitivity(90); </code> 
   ```
   * **p5.gif.js**
   
@@ -82,8 +81,7 @@ There is next and back button in every page to finish or continue the experience
       gif.position(windowWidth/2 - 100, 70);
    } else {
       gif.size(0, 0);
-  } </code>
-  
+  } </code> 
   ```
   
   * **p5.geolocation** 
@@ -98,8 +96,8 @@ There is next and back button in every page to finish or continue the experience
   ```
   <code>let url =
   'http://api.waqi.info/feed/geo:' + la + ';' + lo + '/?token=7c35c573db01e62c917b73ff16afb1e111780d3d';
-  loadJSON(url, gotData, 'jsonp'); </code>
   
+  loadJSON(url, gotData, 'jsonp'); </code>
   ```
  
  * **Graphical Style** 
