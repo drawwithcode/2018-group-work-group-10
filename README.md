@@ -51,7 +51,7 @@ There is next and back button in every page to finish or continue the experience
 
   * **gest.min.js** is the main library to obtain human gestures and to clean actions.
   
-  gest.js is developed by [hdmchl](hhttps://github.com/hdmchl) and it's a webcam based gesture recognition library that helps developers make webpages more immersive.
+  gest.js is developed by [hdmchl](https://github.com/hdmchl) and it's a webcam based gesture recognition library that helps developers make webpages more immersive.
   
   We used this library to recognize the uses' gesture so that to clean the haze gradually, as well as to simulate a immersive experience of cleaning haze by waving arms.
   
@@ -98,6 +98,7 @@ There is next and back button in every page to finish or continue the experience
   
   loadJSON(url, gotData, 'jsonp'); </code>
   ```
+ 
  
  * **Graphical Style** 
  
