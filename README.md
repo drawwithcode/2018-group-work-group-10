@@ -109,5 +109,5 @@ There is next and back button in every page to finish or continue the experience
 
 ## TEAM MEMBERS:
   * Zixun  Huang
-  * Weikang Zhong
+  * Chung Wui Kang
   * Deniz Yanik
