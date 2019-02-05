@@ -39,7 +39,7 @@ Users will experience the feeling of staying in the environment of heavy air pol
 
 ### HOW IT WORKS?
 
-* Firstly, the user clicks the city that s/he wants to explore. Then, the user starts to experience how haze effects cities. They try to clear their vision with interacting with webcam because they can barely see the city. After cleaning process, they get specific information about related city and its haze problem. 
+Firstly, the user clicks the city that s/he wants to explore. Then, the user starts to experience how haze effects cities. They try to clear their vision with interacting with webcam because they can barely see the city. After cleaning process, they get specific information about related city and its haze problem. 
 
 There is next and back button in every page to finish or continue the experience. When the user finishes to experience of every city, they end up with more to read and your location page. In this page user can read more about haze and air pollution. On the other hand, they can learn the percentage of haze and air pollution in their city. 
 
@@ -126,10 +126,14 @@ There is next and back button in every page to finish or continue the experience
   We had a big problem of getting the URL data and combining it with p5.geolocation.js. Then we changed our code like this:
 
 ```
+la = myLoc.latitude;
+lo = myLoc.longitude;
+  
 let url =
-  'http://api.waqi.info/feed/geo:' + la + ';' + lo + '/?token=7c35c573db01e62c917b73ff16afb1e111780d3d';
-  loadJSON(url, gotData, 'jsonp');
-  ```
+'http://api.waqi.info/feed/geo:' + la + ';' + lo + '/?token=7c35c573db01e62c917b73ff16afb1e111780d3d';
+  
+loadJSON(url, gotData, 'jsonp');
+ ```
   And also add this in html head:
   
   ```  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> ``` 
