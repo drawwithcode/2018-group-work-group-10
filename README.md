@@ -1,4 +1,4 @@
-![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/losgo.png)
+![Lahore](/assets/losgo.png)
  
  ## About
  
