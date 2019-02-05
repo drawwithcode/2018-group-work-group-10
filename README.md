@@ -57,6 +57,7 @@ There is next and back button in every page to finish or continue the experience
   
   For example:
   
+  ```
   <code> gest.options.subscribeWithCallback(function(gesture) {
     //var message = '';
     if (gesture.direction) {
@@ -70,17 +71,21 @@ There is next and back button in every page to finish or continue the experience
   gest.start();
   gest.options.sensitivity(90); </code>
   
+  ```
   * **p5.gif.js**
   
   p5.gif.js is a library that let we play animated gifs in p5.js sketches. You can load a gif by calling loadGif('something.gif') and then can display it using p5's built in image() function. Like this:
   
+  ```
   <code> if(frameCount < 30){
       gif.size(200, 200);
       gif.position(windowWidth/2 - 100, 70);
    } else {
       gif.size(0, 0);
   } </code>
-   
+  
+  ```
+  
   * **p5.geolocation** 
   
   p5.geolocation is used to get the location of users and direct them to learn air pollution rates at their location.
@@ -90,9 +95,12 @@ There is next and back button in every page to finish or continue the experience
   
   We used Air Quality Programmatic APIs:[http://aqicn.org/api/cn/](http://aqicn.org/api/cn/) to get the real time air quality index of the user's location. Like this:
   
+  ```
   <code>let url =
   'http://api.waqi.info/feed/geo:' + la + ';' + lo + '/?token=7c35c573db01e62c917b73ff16afb1e111780d3d';
   loadJSON(url, gotData, 'jsonp'); </code>
+  
+  ```
  
  * **Graphical Style** 
  
