@@ -114,7 +114,7 @@ There is next and back button in every page to finish or continue the experience
 
 ## CHALLENGES
 
-**Gesture Recognition Sensitiveness**
+* **Gesture Recognition Sensitiveness**
 
   The gesture recognition sensitiveness is hard to control and it cannot always recognize every gesture from the user. To let user feel the process and percentage of how much haze they clean, we added a ellipse progress bar:
 
@@ -123,7 +123,7 @@ There is next and back button in every page to finish or continue the experience
   arc(60, 60, 50, 50, 0, count);
   ```
 
-**URL Data & Real Time Location**
+* **URL Data & Real Time Location**
 
   We had a big problem of getting the URL data and combining it with p5.geolocation.js. Then we changed our code like this:
 
