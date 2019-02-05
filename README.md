@@ -49,9 +49,9 @@ There is next and back button in every page to finish or continue the experience
 
 * The project contains different code libraries and URL data. 
 
-  * **gest.min.js** is the main library to obtain human gestures and to clean actions.
+  * **[gest.mim.js](https://github.com/hdmchl/gest.js)** 
   
-  gest.js is developed by [hdmchl](https://github.com/hdmchl) and it's a webcam based gesture recognition library that helps developers make webpages more immersive.
+  gest.js is the main library to obtain human gestures and to clean actions, which is developed by [hdmchl](https://github.com/hdmchl) and it's a webcam based gesture recognition library that helps developers make webpages more immersive.
   
   We used this library to recognize the uses' gesture so that to clean the haze gradually, as well as to simulate a immersive experience of cleaning haze by waving arms.
   
@@ -71,7 +71,7 @@ There is next and back button in every page to finish or continue the experience
   gest.start();
   gest.options.sensitivity(90); </code> 
   ```
-  * **p5.gif.js**
+  * **[p5.gif.js](https://github.com/antiboredom/p5.gif.js)**
   
   p5.gif.js is a library that let we play animated gifs in p5.js sketches. You can load a gif by calling loadGif('something.gif') and then can display it using p5's built in image() function. Like this:
   
@@ -90,7 +90,7 @@ There is next and back button in every page to finish or continue the experience
   
   * **URL Data** 
   
-  We used Air Quality Programmatic APIs:[http://aqicn.org/api/cn/](http://aqicn.org/api/cn/) to get the real time air quality index of the user's location. Like this:
+  We used [Air Quality Programmatic APIs](http://aqicn.org/api/cn/) to get the real time air quality index of the user's location. Like this:
   
   ```
   <code>let url =
