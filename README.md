@@ -49,7 +49,7 @@ There is next and back button in every page to finish or continue the experience
 
 * The project contains different code libraries and URL data. 
 
-  * **[gest.mim.js](https://github.com/hdmchl/gest.js)** 
+  * **[gest.min.js](https://github.com/hdmchl/gest.js)** 
   
   gest.js is the main library to obtain human gestures and to clean actions, which is developed by [hdmchl](https://github.com/hdmchl) and it's a webcam based gesture recognition library that helps developers make webpages more immersive.
   
