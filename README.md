@@ -14,7 +14,7 @@
  
 ## SUBJECT OF PROJECT 
 
-The theme we choose is the **Air Pollution**, which is more and more serious in in recent years. There are a lot of different type of pollution, we want to hightlight the problem of air pollution especially haze. Therefore, We select some top polluted cities which are Beijing, China/New Delhi, India/Ulan Bator, Mongolia/Cairo, Egypt/Lahore, Pakistan.
+The theme we choose is the **Air Pollution**, which is more and more serious in in recent years. There are a lot of different types of pollution, we want to hightlight the problem of air pollution especially haze. Therefore, We select some top polluted cities which are Beijing, China/New Delhi, India/Ulan Bator, Mongolia/Cairo, Egypt/Lahore, Pakistan.
 
 ![Lahore](https://github.com/drawwithcode/2018-group-work-group-10/blob/master/assets/map_readme.png)
 
@@ -136,7 +136,7 @@ let url =
   
 loadJSON(url, gotData, 'jsonp');
  ```
-  And also add this in html head:
+  And also added this in html head:
   
   ```  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> ``` 
 
