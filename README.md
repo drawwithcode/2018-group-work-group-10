@@ -72,6 +72,8 @@ There is next and back button in every page to finish or continue the experience
   gest.start();
   gest.options.sensitivity(90); </code> 
   ```
+  ![city](/assets/city.gif)
+  
   * **[p5.gif.js](https://github.com/antiboredom/p5.gif.js)**
   
   p5.gif.js is a library that let we play animated gifs in p5.js sketches. You can load a gif by calling loadGif('something.gif') and then can display it using p5's built in image() function. Like this:
@@ -121,7 +123,8 @@ There is next and back button in every page to finish or continue the experience
  ```
   var count = map(tra1, 255, 0, 0,TWO_PI);
   arc(60, 60, 50, 50, 0, count);
-  ```
+  ``` 
+  ![process](/assets/process.gif)
 
 * **URL Data & Real Time Location**
 
@@ -139,6 +142,8 @@ loadJSON(url, gotData, 'jsonp');
   And also added this in html head:
   
   ```  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> ``` 
+  
+  ![location](/assets/location.gif)
 
 
 ## TEAM MEMBERS:
