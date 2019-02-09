@@ -71,7 +71,7 @@ function draw() {
     strokeWeight(1);
     stroke(60, tra2);
     fill(220,tra3);
-    rect(windowWidth/2,  windowHeight/2-83, 420, 200, 5);
+    rect(windowWidth/2,  windowHeight/4+65, 420, 230, 5);
     pop();
 
     textAlign(LEFT);
